@@ -1,0 +1,42 @@
+function olustur(deltax,deltay,baba) {
+	var yeni = instance_create_layer(0,0,"Instances",minyon)
+	yeni.babasi = baba
+	yeni.starterdeltax = deltax
+	yeni.starterdeltay = deltay
+}
+
+function minyonolusturucu(number,sender){
+	switch number {
+		case 0:
+			olustur(96,96,sender)
+			olustur(0,96,sender)
+			olustur(-96,96,sender)
+		case 1:
+			olustur(0,96,sender)
+			olustur(-96,96,sender)
+			olustur(0,96+96,sender)
+		case 2:
+			olustur(0,96,sender)
+			olustur(-96,96,sender)
+			olustur(-96,96+96,sender)
+		case 3:
+			olustur(0,96,sender)
+			olustur(96,0,sender)
+			olustur(96+96,0,sender)
+			olustur(96+96+96,0,sender)
+			olustur(96,96,sender)
+			olustur(96+96,96,sender)
+			olustur(96+96+96,96,sender)
+		case 4:
+			olustur(0,96,sender)
+			olustur(96,96,sender)
+			olustur(96,0,sender)
+		case 5:
+			olustur(0,96,sender)
+			olustur(96,96,sender)
+			olustur(96,0,sender)
+			olustur(96+96,96,sender)
+			olustur(96+96,0,sender)
+	} 
+
+}
